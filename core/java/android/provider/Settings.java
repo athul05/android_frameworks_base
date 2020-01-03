@@ -5897,6 +5897,16 @@ public final class Settings {
         public static final String TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK = "touchscreen_gesture_haptic_feedback";
 
         /**
+         * Ability to hide notch
+         * @hide
+         */
+        public static final String HIDE_NOTCH = "hide_notch";
+
+        /** @hide */
+        private static final Validator HIDE_NOTCH_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -6026,6 +6036,7 @@ public final class Settings {
             DOZE_BRIGHTNESS,
             FLASHLIGHT_ON_CALL,
             GESTURE_PILL_TOGGLE,
+            HIDE_NOTCH,
         };
 
         /**
@@ -6227,6 +6238,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(DOZE_BRIGHTNESS);
             PRIVATE_SETTINGS.add(FLASHLIGHT_ON_CALL);
             PRIVATE_SETTINGS.add(GESTURE_PILL_TOGGLE);
+            PRIVATE_SETTINGS.add(HIDE_NOTCH);
         }
 
         /**
@@ -6402,6 +6414,7 @@ public final class Settings {
             VALIDATORS.put(DOZE_BRIGHTNESS, DOZE_BRIGHTNESS_VALIDATOR);
             VALIDATORS.put(FLASHLIGHT_ON_CALL, FLASHLIGHT_ON_CALL_VALIDATOR);
             VALIDATORS.put(GESTURE_PILL_TOGGLE, GESTURE_PILL_TOGGLE_VALIDATOR);
+            VALIDATORS.put(HIDE_NOTCH, HIDE_NOTCH_VALIDATOR);
         }
 
         /**
